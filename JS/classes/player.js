@@ -4,9 +4,7 @@ export default class Player {
         this.currentScore = currentScore
     }
     
-    initPlayer (global, current) {
-        global.innerHTML = 0
-        current.innerHTML = 0
+    initPlayer () {
         this.globalScore = 0
         this.currentScore = 0
     }
