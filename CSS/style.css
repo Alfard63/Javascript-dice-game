@@ -2,6 +2,10 @@
     font-family: Lato;
     src: url(../FONTS/Lato-Light.ttf);
 }
+:root{
+        --color-1: #dc143c;
+        --color-2: #f8f9fa;
+}
 
 html,
 body {
@@ -17,8 +21,14 @@ body {
 }
 
 .container-fluid {
-    background: linear-gradient(180deg, #ebe8e8 50%, #f8f9fa 50%);
     height: 100%;
+}
+
+.player1-turn {
+    background: linear-gradient(180deg, #ebe8e8 50%, #f8f9fa 50%);
+}
+.player2-turn {
+    background: linear-gradient(180deg, #f8f9fa 50%, #ebe8e8 50%);
 }
 
 .unselectable {
@@ -37,7 +47,7 @@ body {
 }
 
 #diceFace {
-    background-color: white;
+    background-color: #f8f9fa;
     border-radius: 13%;
     width: 100px;
     height: 100px;
@@ -45,6 +55,7 @@ body {
 
 .box {
     width: 80px;
+    height: 80px;
 }
 
 h2 {
@@ -68,7 +79,7 @@ p {
     font-size: 2.5em;
 }
 
-.label1::after, .label2::after {
+#label1::after, #label2::after {
     border-radius: 50%;
     content: "";
     position: absolute;
@@ -79,18 +90,18 @@ p {
     
 }
 
-.label1::after {
-    background: crimson;    
+#label1::after {
+    background: var(--color-1, #dc143c); 
 }
 
-.label2::after {
-    background: whitesmoke;
+#label2::after {
+    background: var(--color-2, #f8f9fa);
 }
 
 @media screen and (min-width: 380px) {
 
-    .label1::after, .label2::after {
-        top: 7px;
+    #label1::after, #label2::after {
+        top: 5px;
         right: -25px;
         height: 15px;
         width: 15px;
@@ -104,10 +115,11 @@ p {
 
     .box {
         width: 100px;
+        height: 90px;
     }
 
     h2 {
-        font-size: 1.5em;
+        font-size: 1.4em;
     }
 
     .global-score {
@@ -127,13 +139,27 @@ p {
     }
 }
 
-@media screen and (min-width: 768px) {
-    .container-fluid {
-        background: linear-gradient(90deg, #ebe8e8 50%, #f8f9fa 50%);
-        height: 100%;
+@media screen and (min-width: 576px) {
+
+    #label1::after, #label2::after {
+        top: 5px;
+        right: -15px;
+        height: 15px;
+        width: 15px;
+        
     }
 
-    .label1::after, .label2::after {
+}
+
+@media screen and (min-width: 768px) {
+    .player1-turn {
+        background: linear-gradient(90deg, #ebe8e8 50%, #f8f9fa 50%);
+    }
+    .player2-turn {
+        background: linear-gradient(90deg, #f8f9fa 50%, #ebe8e8 50%);
+    }
+
+    #label1::after, #label2::after {
         top: 15px;
         right: -35px;
         height: 25px;
@@ -148,6 +174,7 @@ p {
 
     .box {
         width: 150px;
+        height: 125px;
     }
     
     h2 {
@@ -174,7 +201,7 @@ p {
 
 @media screen and (min-width: 992px) {
 
-    .label1::after, .label2::after {
+    #label1::after, #label2::after {
         top: 18px;
         right: -45px;
         height: 25px;
@@ -190,7 +217,7 @@ p {
 
 @media screen and (min-width: 1200px) {
 
-    .label1::after, .label2::after {
+    #label1::after, #label2::after {
         top: 22px;
         right: -50px;
         height: 30px;
