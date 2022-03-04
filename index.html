@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/CSS/bootstrap.min.css">
+    <link rel="stylesheet" href="/CSS/bootstrap-icons.css">
+    <link rel="stylesheet" href="/CSS/style.css">
+    <title>Document</title>
+</head>
+
+<body class="p-3 p-md-4 text-center unselectable">
+    <!-- board -->
+    <main class="p-2 p-md-3 container-fluid rounded-3 d-flex flex-column shadow-lg">
+
+        <!-- row for the Game  -->
+        <div class="d-flex flex-column flex-md-row justify-content-between flex-fill ">
+            <!-- col PLAYER 1 -->
+            <section class="mt-0 mt-md-4 d-flex flex-row flex-md-column justify-content-around align-items-center flex-fill">
+                <div>
+                    <!-- PLAYER 1 LABEL -->
+                    <div class="d-flex align-items-center">
+                        <h2 class="m-0 label1">PLAYER 1</h2>
+                    </div>
+                    <!-- row for PLAYER 1 GLOBAL SCORE -->
+                    <h2 id="player1GlobalScore" class="global-score m-0 text-danger">72</h2>
+                </div>
+                <!-- row for PLAYER 1 CURRENT SCORE -->
+                <div class="box p-2 d-flex flex-column justify-content-center align-items-center bg-danger">
+                    <h4 class="m-0">CURRENT</h4>
+                    <p id="player1CurrentScore" class="text-light m-0">12</p>
+                </div>
+
+            </section>
+
+            <!-- col dice and buttons -->
+            <section class="d-flex flex-column justify-content-center justify-content-md-start align-items-center">
+                <!-- New Game button -->
+                <h3 id="newGameBtn" type="button" class="m-0 mt-md-3 text-center">
+                    <i class="bi-plus-circle text-danger"></i>
+                    NEW GAME
+                </h3>
+                <!-- dice -->
+                <div id="dice" class="m-4 m-md-0 mt-md-5 pt-md-5 d-flex justify-content-center flex-fill">
+                </div>
+                <!-- Roll and Hold buttons -->
+                <div class="mb-0 mb-md-4 mb-xl-2 d-flex flex-row flex-md-column flex-fill justify-content-center align-items-center">
+                    <h3 id="rollDiceBtn" type="button" class="m-0 me-4 m-md-0 mb-md-2 text-center">
+                        <i class="pe-1 bi bi-arrow-repeat text-danger"></i>
+                        ROLL DICE
+                    </h3>
+                    <h3 id="holdBtn" type="button" class="m-0 ms-4 m-md-0 mt-md-2 mb-md-4 text-center">
+                        <i class="pe-1 bi bi-box-arrow-in-down text-danger"></i>
+                        HOLD
+                    </h3>
+                </div>
+            </section>
+
+            <!-- col PLAYER 2 -->
+            <section class="mt-0 mt-md-4 d-flex flex-row flex-md-column justify-content-around align-items-center flex-fill">
+                <div>
+                    <!-- PLAYER 2 LABEL -->
+                    <div class="d-flex align-items-center">
+                        <h2 class="label2 m-0">PLAYER 2</h2>
+                    </div>
+                    <!-- row for PLAYER 2 GLOBAL SCORE -->
+                    <h2 id="player2GlobalScore" class="global-score m-0 text-danger">72</h2>
+                </div>
+                <!-- row for PLAYER 2 CURRENT SCORE -->
+                <div class="box p-2 d-flex flex-column justify-content-center align-items-center bg-danger">
+                    <h4 class="m-0">CURRENT</h4>
+                    <p id="player2CurrentScore" class="text-light m-0">12</p>
+                </div>
+
+            </section>
+        </div>
+    </main>
+    <script src="/JS/bootstrap.bundle.min.js"></script>
+    <script type="module" src="/JS/script.js"></script>
+</body>
+
+</html>
