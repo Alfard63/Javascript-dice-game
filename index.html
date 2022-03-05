@@ -14,11 +14,11 @@
 <body class="p-3 p-md-4 unselectable text-center">
     <!-- board -->
     <main id="board"
-        class="p-2 p-md-3 container-fluid d-flex flex-column flex-md-row justify-content-evenly rounded-3 shadow-lg">
+        class="py-5 p-md-3 container-fluid d-flex flex-column flex-md-row justify-content-evenly rounded-3 shadow-lg">
 
         <!-- Section PLAYER 1 -->
         <section class="row flex-md-column justify-content-evenly align-items-center">
-            <div class="col-4 col-sm-3 col-md-12">
+            <div class="col-5 col-sm-3 col-md-12">
                 <!-- PLAYER 1 LABEL -->
                 <h2 id="label1" class="m-0">PLAYER 1</h2>
                 <!-- row for PLAYER 1 GLOBAL SCORE -->
@@ -59,7 +59,7 @@
 
         <!-- Section PLAYER 2 -->
         <section class="row flex-md-column justify-content-evenly align-items-center">
-            <div class="col-4 col-sm-3 col-md-12">
+            <div class="col-5 col-sm-3 col-md-12">
                 <!-- PLAYER 2 LABEL -->
                 <h2 id="label2" class="m-0">PLAYER 2</h2>
                 <!-- row for PLAYER 2 GLOBAL SCORE -->
@@ -71,6 +71,9 @@
                 <p id="player2CurrentScore" class="text-light m-0">12</p>
             </div>
         </section>
+        <div id="volumeBtn" class="rounded-circle d-flex align-items-center justify-content-center position-fixed end-0 top-0 m-4 m-md-5 fs-2 shadow">
+            <i class="bi bi-volume-up text-dark"></i>
+        </div>
     </main>
     <script src="/JS/bootstrap.bundle.min.js"></script>
     <script type="module" src="/JS/script.js"></script>
