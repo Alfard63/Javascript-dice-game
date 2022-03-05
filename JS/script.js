@@ -21,11 +21,11 @@ document.addEventListener("DOMContentLoaded", () => {
     const board = document.getElementById('board')
 
 /* Create all game songs */
-    const clickSound = new Song ('../songs/click.ogg')
-    const wrongSound = new Song ('../songs/wrong.wav')
-    const winSound = new Song ('../songs/win.wav')
-    const holdSound = new Song ('../songs/correct.wav')
-    const rollgSound = new Song('../songs/dice-roll.wav')
+    const clickSound = new Song ('../songs/click.mp3')
+    const wrongSound = new Song ('../songs/wrong.mp3')
+    const winSound = new Song ('../songs/win.mp3')
+    const holdSound = new Song ('../songs/correct.mp3')
+    const rollgSound = new Song('../songs/dice-roll.mp3')
 
 /* Create a new View, 2 Player and Dice */
     const view = new View
