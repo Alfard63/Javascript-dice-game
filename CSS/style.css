@@ -41,7 +41,7 @@ body {
     background-color: var(--btn-color);
 }
 aside {
-    bottom: 1em;
+    top: 1em;
     left: 1em;
 }
 
@@ -131,7 +131,7 @@ main p {
 @media screen and (min-width: 380px) {
 
     aside {
-        bottom: 1.2em;
+        top: 1.2em;
         left: 1.2em;
     }
 
@@ -214,7 +214,7 @@ main p {
     }
 
     aside {
-        bottom: 2em;
+        top: 2em;
         left: 2em;
     }
 
