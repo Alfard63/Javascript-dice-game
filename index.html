@@ -11,10 +11,41 @@
     <title>Document</title>
 </head>
 
-<body class="p-3 p-md-4 unselectable text-center">
+<body class="p-3 p-md-4 unselectable">
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="helpModal" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title fs-1 fw-bold" id="helpModal">HOW TO PLAY</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h5 class="fs-2 fw-bold">Rules :</h5>
+                    <p class="fs-4">
+                        The game includes 2 players on a single screen. <br>
+                        Each player has a temporary score (CURRENT) and an overall score (GLOBAL). <br>
+                        At each turn, the player has his CURENT initialized to 0 and can roll a die as many times as he wishes. 
+                        The result of a throw is added to the CURENT. <br>
+                        During his turn, the player can decide at any time to: <br>
+                        - Click on the “Hold” option, which sends the points of the CURENT to the GLOBAL. <br>
+                        It will then be theother player's turn. <br>
+                        - Roll the dice. If he rolls a 1, his CURENT score is lost and his turn ends. <br>
+                        The first player to reach 100 points on global wins the game.
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary text-light fw-bold"
+                        data-bs-dismiss="modal">Understand</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- board -->
     <main id="board"
-        class="py-5 p-md-3 container-fluid d-flex flex-column flex-md-row justify-content-evenly rounded-3 shadow-lg">
+        class="text-center py-5 p-md-3 container-fluid player1-turn d-flex flex-column flex-md-row justify-content-evenly rounded-3 shadow-lg">
 
         <!-- Section PLAYER 1 -->
         <section class="row flex-md-column justify-content-evenly align-items-center">
@@ -41,11 +72,13 @@
                 </h3>
             </div>
             <!-- dice -->
-            <div id="dice" class="d-md-flex flex-fill justify-content-md-center align-items-md-center col-12 my-5 my-md-0 pt-md-3">
+            <div id="dice"
+                class="d-md-flex flex-fill justify-content-md-center align-items-md-center col-12 my-3 my-md-0 pt-md-3">
                 <img id="diceFace" class="m-0" src="/IMG/Dice-1.svg" alt="">
             </div>
             <!-- Roll and Hold buttons -->
-            <div class="col-12 d-flex flex-fill flex-md-column justify-content-around justify-content-md-center mb-md-5">
+            <div
+                class="col-12 d-flex flex-fill flex-md-column justify-content-around justify-content-md-center mb-md-5">
                 <h3 id="rollDiceBtn" type="button" class="m-0">
                     <i class="pe-1 bi bi-arrow-repeat text-danger"></i>
                     ROLL DICE
@@ -71,10 +104,19 @@
                 <p id="player2CurrentScore" class="text-light m-0">12</p>
             </div>
         </section>
-        <div id="volumeBtn" class="rounded-circle d-flex align-items-center justify-content-center position-fixed end-0 top-0 m-4 m-md-5 fs-2 shadow">
-            <i class="bi bi-volume-up text-dark"></i>
-        </div>
+        <!-- Aside for volume button and help button -->
+        <aside class="position-fixed d-flex">
+            <div id="volumeBtn" type="button"
+                class="m-2 rounded-circle d-flex align-items-center justify-content-center shadow fs-2">
+                <i class="bi bi-volume-up text-dark"></i>
+            </div>
+            <div id="helpBtn" type="button" data-bs-toggle="modal" data-bs-target="#myModal"
+                class="m-2 rounded-circle d-flex align-items-center justify-content-center shadow fs-2">
+                <i class="bi bi-question text-dark"></i>
+            </div>
+        </aside>
     </main>
+
     <script src="/JS/bootstrap.bundle.min.js"></script>
     <script type="module" src="/JS/script.js"></script>
 </body>

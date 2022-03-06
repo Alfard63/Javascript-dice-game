@@ -2,16 +2,20 @@
     font-family: Lato;
     src: url(../FONTS/Lato-Light.ttf);
 }
-:root{
-        --color-1: #dc143c;
-        --color-2: #f8f9fa;
-        --color-3: #ebe8e8;
-        --color-4: #75e27a;
-        --color-5: #eeb3af;
-        --bg-color-1: #975e29;
-        --bg-color-2: #77593c52;
 
-
+:root {
+    --color-1: #dc143c;
+    --color-2: #f8f9fa;
+    --color-3: #d8d8d8;
+    --label-color-1: var(--color-1);
+    --label-color-2: var(--color-2);
+    --player-turn-color-1: var(--color-2);
+    --player-turn-color-2: var(--color-3);
+    --btn-color: var(--color-2);
+    --victory-color: #75e27a;
+    --loose-color: #eeb3af;
+    --bg-color-1: #975e29;
+    --bg-color-2: #77593c52;
 }
 
 html,
@@ -31,10 +35,14 @@ body {
     height: 100%;
 }
 
-#volumeBtn {
-    height: 40px;
-    width: 40px;
-    background-color: var(--color-3);
+#volumeBtn, #helpBtn {
+    height: 35px;
+    width: 35px;
+    background-color: var(--btn-color);
+}
+aside {
+    bottom: 1em;
+    left: 1em;
 }
 
 .player1-turn {
@@ -46,11 +54,11 @@ body {
 }
 
 .player1-victory {
-    background: linear-gradient(180deg, var(--color-4) 50%, var(--color-5) 50%);
+    background: linear-gradient(180deg, var(--victory-color) 50%, var(--loose-color) 50%);
 }
 
 .player2-victory {
-    background: linear-gradient(180deg, var(--color-5) 50%, var(--color-4) 50%);
+    background: linear-gradient(180deg, var(--loose-color) 50%, var(--victory-color) 50%);
 }
 
 .unselectable {
@@ -81,7 +89,7 @@ body {
 }
 
 h2 {
-    font-size: 1.2em;
+    font-size: 1.1em;
     position: relative;
 }
 
@@ -97,7 +105,7 @@ h4 {
     font-size: 0.8em;
 }
 
-p {
+main p {
     font-size: 2.5em;
 }
 
@@ -109,25 +117,30 @@ p {
     right: -20px;
     height: 12px;
     width: 12px;
-    
+
 }
 
 #label1::after {
-    background: var(--color-1); 
+    background: var(--label-color-1);
 }
 
 #label2::after {
-    background: var(--color-2);
+    background: var(--label-color-2);
 }
 
 @media screen and (min-width: 380px) {
+
+    aside {
+        bottom: 1.2em;
+        left: 1.2em;
+    }
 
     #label1::after, #label2::after {
         top: 5px;
         right: -25px;
         height: 15px;
         width: 15px;
-        
+
     }
 
     #diceFace {
@@ -156,8 +169,18 @@ p {
         font-size: 1em;
     }
 
-    p {
+    main p {
         font-size: 2.5em;
+    }
+}
+
+@media screen and (min-width: 450px) {
+    #label1::after, #label2::after {
+        top: 5px;
+        right: -10px;
+        height: 15px;
+        width: 15px;
+
     }
 }
 
@@ -168,7 +191,7 @@ p {
         right: -15px;
         height: 15px;
         width: 15px;
-        
+
     }
 
 }
@@ -177,16 +200,22 @@ p {
     .player1-turn {
         background: linear-gradient(90deg, var(--color-3) 50%, var(--color-2) 50%);
     }
+
     .player2-turn {
         background: linear-gradient(90deg, var(--color-2) 50%, var(--color-3) 50%);
     }
 
     .player1-victory {
-        background: linear-gradient(90deg, var(--color-4) 50%, var(--color-5) 50%);
+        background: linear-gradient(90deg, var(--victory-color) 50%, var(--loose-color) 50%);
     }
-    
+
     .player2-victory {
-        background: linear-gradient(90deg, var(--color-5) 50%, var(--color-4) 50%);
+        background: linear-gradient(90deg, var(--loose-color) 50%, var(--victory-color) 50%);
+    }
+
+    aside {
+        bottom: 2em;
+        left: 2em;
     }
 
     #label1::after, #label2::after {
@@ -194,7 +223,7 @@ p {
         right: -35px;
         height: 25px;
         width: 25px;
-        
+
     }
 
     #diceFace {
@@ -206,28 +235,27 @@ p {
         width: 150px;
         height: 125px;
     }
-    
+
     h2 {
         font-size: 2.8em;
     }
-    
+
     .global-score {
         font-size: 6em;
     }
-    
+
     h3 {
         font-size: 2em;
     }
-    
+
     h4 {
         font-size: 1.5em;
     }
-    
-    p {
+
+    main p {
         font-size: 4em;
     }
 }
-
 
 @media screen and (min-width: 992px) {
 
@@ -236,14 +264,13 @@ p {
         right: -45px;
         height: 25px;
         width: 25px;
-        
+
     }
 
     h2 {
         font-size: 3.2em;
     }
 }
-
 
 @media screen and (min-width: 1200px) {
 
@@ -252,7 +279,7 @@ p {
         right: -50px;
         height: 30px;
         width: 30px;
-        
+
     }
 
     #diceFace {
