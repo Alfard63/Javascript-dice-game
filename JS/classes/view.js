@@ -9,7 +9,9 @@ export default class View {
         this.label1 = document.getElementById('label1')
         this.label2 = document.getElementById('label2')
         this.board = document.getElementById('board')
-        this.dice = document.getElementById('dice')          
+        this.dice = document.getElementById('dice')
+        this.diceFaces = []
+
     }
 
 /* Update the view of Current Score and Global Score for each player */
@@ -21,27 +23,28 @@ export default class View {
     }
 
 /* Update the view of the dice */
-    updateDiceview(int) {
-        switch (int) {
+    updateDiceview(diceValue) {
+        switch (diceValue) {
             case 1:
-                this.dice.innerHTML = `<img id="diceFace" class="mt-md-4" src="/IMG/Dice-1.svg" alt="">` 
-                break;               
+                this.dice.replaceChild(this.diceFaces[0], this.dice.firstChild)
+                break               
             case 2:
-                this.dice.innerHTML = `<img id="diceFace" class="mt-md-4" src="/IMG/Dice-2.svg" alt="">`  
-                break;              
+                this.dice.replaceChild(this.diceFaces[1], this.dice.firstChild)
+                break             
             case 3:
-                this.dice.innerHTML = `<img id="diceFace" class="mt-md-4" src="/IMG/Dice-3.svg" alt="">` 
-                break;               
+                this.dice.replaceChild(this.diceFaces[2], this.dice.firstChild)
+                break             
             case 4:
-                this.dice.innerHTML = `<img id="diceFace" class="mt-md-4" src="/IMG/Dice-4.svg" alt="">` 
-                break;               
+                this.dice.replaceChild(this.diceFaces[3], this.dice.firstChild)
+                break               
             case 5:
-                this.dice.innerHTML = `<img id="diceFace" class="mt-md-4" src="/IMG/Dice-5.svg" alt="">` 
-                break;               
+                this.dice.replaceChild(this.diceFaces[4], this.dice.firstChild)
+                break               
             case 6:
-                this.dice.innerHTML = `<img id="diceFace" class="mt-md-4" src="/IMG/Dice-6.svg" alt="">`                       
+                this.dice.replaceChild(this.diceFaces[5], this.dice.firstChild)
+                break
             default:
-                break;
+                break
         }
     }
 
@@ -98,5 +101,7 @@ export default class View {
 
         rollDiceBtn.classList.add(`disabled`)
         holdBtn.classList.add(`disabled`)
+        this.dice.classList.add(`disabled`)
+        console.log(dice.classList)
     }
 }
